@@ -1,0 +1,46 @@
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--forest:#1B4332;--mid:#2D6A4F;--mist:#D8F3DC;--cream:#F8F5ED;--ink:#111B14;--muted:#4A5D53;--gold:#D4A017;--border:#C9E4D1;--red:#9B2C2C}
+body{font-family:'DM Sans',system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;font-size:15px}
+.bar{background:var(--forest);color:#fff;height:58px;display:flex;align-items:center;gap:12px;padding:0 16px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:600;font-size:1.05rem}
+.brand img{height:30px}
+.demo{background:var(--gold);color:var(--ink);font-size:.72rem;font-weight:700;padding:2px 10px;border-radius:12px;text-transform:uppercase;letter-spacing:.04em}
+main{max-width:1100px;margin:0 auto;padding:24px 16px 60px}
+h1{font-size:1.4rem;color:var(--forest);margin-bottom:12px}
+h2{font-size:1.1rem;color:var(--forest);margin:28px 0 10px}
+.card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:22px;margin-bottom:18px}
+.notice{max-width:620px;margin:40px auto}
+.notice.error h1{color:var(--red)}
+.kv{width:100%;border-collapse:collapse;margin:10px 0 18px}
+.kv th,.kv td{text-align:left;padding:7px 8px;border-bottom:1px solid #eee;vertical-align:top}
+.kv th{width:36%;color:var(--muted);font-weight:500}
+.kv td{white-space:pre-wrap;word-break:break-word}
+label{display:block;font-weight:600;font-size:.85rem;margin:8px 0 4px}
+textarea{width:100%;min-height:80px;border:1px solid var(--border);border-radius:8px;padding:9px;font:inherit}
+.btn{display:inline-block;border:none;border-radius:24px;padding:10px 22px;font:inherit;font-weight:600;cursor:pointer;background:var(--mid);color:#fff;text-decoration:none}
+.btn.reject{background:var(--red)}
+.btn.small{padding:6px 14px;font-size:.82rem}
+.btn.ghost{background:transparent;color:var(--forest);border:1px solid var(--border)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.list{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--border);border-radius:10px;overflow:hidden;font-size:.88rem}
+.list th,.list td{padding:9px 10px;border-bottom:1px solid #eee;text-align:left;vertical-align:top}
+.list th{background:var(--mist);color:var(--forest);font-size:.78rem;text-transform:uppercase;letter-spacing:.03em}
+.list td.msg{max-width:320px;white-space:pre-wrap;word-break:break-word}
+.pill{display:inline-block;border-radius:12px;padding:1px 9px;font-size:.75rem;font-weight:600}
+.pill.pending,.pill.open,.pill.queued{background:#FEF3C7;color:#92400E}
+.pill.approved,.pill.resolved,.pill.sent{background:var(--mist);color:var(--forest)}
+.pill.rejected,.pill.failed{background:#FDE2E2;color:var(--red)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tabs a{padding:6px 14px;border-radius:18px;border:1px solid var(--border);text-decoration:none;color:var(--forest);background:#fff;font-size:.85rem}
+.tabs a.on{background:var(--forest);color:#fff}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.stat{background:#fff;border:1px solid var(--border);border-radius:10px;padding:12px 16px;min-width:140px}
+.stat b{display:block;font-size:1.4rem;color:var(--forest)}
+.scroll{overflow-x:auto}
+.inline{display:inline}
+details.mail{margin-top:6px}
+details.mail summary{cursor:pointer;color:var(--mid);font-size:.8rem;font-weight:600}
+details.mail pre{white-space:pre-wrap;word-break:break-word;font:inherit;font-size:.82rem;background:var(--cream);border:1px solid var(--border);border-radius:8px;padding:10px;margin-top:6px;max-width:560px}
+details.mail a{color:var(--mid);word-break:break-all}
+.inline input[type=text]{border:1px solid var(--border);border-radius:6px;padding:5px 8px;font:inherit;font-size:.82rem;width:150px}
+@media(max-width:700px){.list thead{display:none}.list tr{display:block;border-bottom:2px solid var(--border)}.list td{display:block;border:none;padding:5px 10px}.list td::before{content:attr(data-l);display:block;font-size:.7rem;color:var(--muted);text-transform:uppercase}}

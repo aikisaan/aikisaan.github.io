@@ -1,0 +1,37 @@
+/* Additions to the inline site styles: forms, feedback messages, demo marker,
+   accessibility and small layout fixes. */
+
+/* Inline two-column grids on content pages collapse on phones (Solutions page overflowed). */
+@media(max-width:760px){[style*="grid-template-columns:1fr 1fr;gap:44px"]{grid-template-columns:1fr!important;gap:28px!important}}
+
+/* Keyboard focus */
+a:focus-visible,button:focus-visible,.nav-toggle:focus-visible,.acc-head:focus-visible,[role="button"]:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+input:focus-visible,select:focus-visible,textarea:focus-visible{box-shadow:0 0 0 3px rgba(64,145,108,0.2)}
+
+/* Forms */
+.form-hint{font-size:0.74rem;color:var(--muted);font-weight:400}
+.req{color:#9B2C2C;margin-left:2px}
+.field-error{font-size:0.75rem;color:#9B2C2C;font-weight:500}
+.form-group.has-error input,.form-group.has-error select,.form-group.has-error textarea{border-color:#C53030;background:#FFF8F8}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:0.8rem;line-height:1.5;color:var(--muted);cursor:pointer}
+.check input{width:18px;height:18px;flex-shrink:0;margin-top:1px;accent-color:var(--forest)}
+.check a{color:var(--forest);text-decoration:underline}
+.hp{position:absolute!important;left:-10000px!important;width:1px;height:1px;overflow:hidden}
+.form-status{border-radius:8px;padding:12px 14px;font-size:0.85rem;line-height:1.55}
+.form-status[hidden]{display:none}
+.form-status.ok{background:var(--mist);color:var(--forest);border:1px solid var(--border)}
+.form-status.err{background:#FDE2E2;color:#7B1E1E;border:1px solid #F5B5B5}
+.form-card button[disabled]{opacity:0.6;cursor:wait}
+.form-note{font-size:0.78rem;color:var(--muted);margin-top:-6px}
+.complaint-wrap{margin-top:48px;scroll-margin-top:80px}
+#reg-farmer,#reg-fpo,#reg-partner{scroll-margin-top:80px}
+
+/* Placeholders for company details still to be supplied */
+.placeholder{background:#FEF3C7;color:#92400E;border-radius:4px;padding:0 4px;font-style:normal}
+
+/* Discreet demo marker (shown only when the server runs with DEMO_MODE=true) */
+.demo-badge{position:fixed;left:12px;bottom:12px;z-index:500;background:var(--gold);color:var(--ink);font-size:0.68rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:4px 10px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.15);opacity:0.85;pointer-events:none}
+.demo-badge-note{display:block;font-weight:500;text-transform:none;letter-spacing:0;font-size:0.62rem}
+@media(max-width:560px){.demo-badge{left:auto;right:8px;bottom:8px;font-size:0.6rem;padding:2px 8px;opacity:0.75}.demo-badge-note{display:none}}
+
+.nav-toggle{cursor:pointer}
